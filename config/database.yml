@@ -79,7 +79,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  # <<: *default
   database: ww-code-api_production
-  username: ww-code-api
-  password: <%= ENV['WW-CODE-API_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # username: ww-code-api
+  # password: <%= ENV['WW-CODE-API_DATABASE_PASSWORD'] %>
