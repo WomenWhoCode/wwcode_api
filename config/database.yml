@@ -56,11 +56,8 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-<<<<<<< HEAD
-<<<<<<< HEAD
   <<: *default
   database: ww-code-api_test 
-=======
   # <<: *default
   adapter: postgresql
   encoding: utf8
@@ -68,11 +65,11 @@ test:
   pool: 5
   username: root
   password:  
->>>>>>> 41eebd6d4a1b84ada5139b007c7cd8cc1a616b2b
-=======
+
+
   <<: *default
   database: ww-code-api_test 
->>>>>>> ffe43f3a20147b8d7a55e10f88ab58cf9caff41f
+
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
