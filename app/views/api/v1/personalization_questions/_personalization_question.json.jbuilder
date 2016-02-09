@@ -1,0 +1,5 @@
+json.id personalization_question.id
+json.objectID personalization_question.objectID
+json.detail personalization_question.detail
+json.createdAt personalization_question.createdAt
+json.updatedAt personalization_question.updatedAt
