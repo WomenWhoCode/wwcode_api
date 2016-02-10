@@ -1,1 +1,1 @@
-json.partial! @building, partial: 'building', as: :building
+json.partial! @personalization_question, partial: 'personalization_question', as: :personalization_question
