@@ -37,6 +37,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
+#addl added gems
+gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
