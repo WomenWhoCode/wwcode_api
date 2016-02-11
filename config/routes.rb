@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
-
+  # devise_for :users
+  mount_devise_token_auth_for 'User', at: 'auth'
   root to: "welcome#index"
-
-  resources :personalization_questions
 
   namespace :api do
     namespace :v1 do
+      resources :users
       resources :personalization_questions
     end
   end
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
