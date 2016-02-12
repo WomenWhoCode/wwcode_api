@@ -11,11 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160210024556) do
+=======
+ActiveRecord::Schema.define(version: 20160211073836) do
+>>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
+=======
+  create_table "events", force: :cascade do |t|
+    t.string   "objectId"
+    t.boolean  "featured"
+    t.string   "network"
+    t.date     "updatedAt"
+    t.string   "url"
+    t.string   "event_date"
+    t.string   "location"
+    t.string   "title"
+    t.integer  "subscribe_count"
+    t.date     "createdAt"
+    t.string   "description"
+    t.string   "meetup_event_id"
+    t.string   "time_zone"
+    t.string   "hex_color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+>>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
@@ -23,6 +49,7 @@ ActiveRecord::Schema.define(version: 20160210024556) do
     t.date     "updatedAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -40,6 +67,8 @@ ActiveRecord::Schema.define(version: 20160210024556) do
     t.datetime "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
+=======
+>>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
   end
 
   create_table "users", force: :cascade do |t|
