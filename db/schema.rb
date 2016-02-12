@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20160211073836) do
     t.string   "detail"
     t.date     "createdAt"
     t.date     "updatedAt"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
