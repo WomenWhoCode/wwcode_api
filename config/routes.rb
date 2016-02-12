@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :users
       resources :personalization_questions
       resources :events
+      resources :personalization_answers
     end
   end
   
