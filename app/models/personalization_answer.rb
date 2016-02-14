@@ -1,3 +1,3 @@
 class PersonalizationAnswer < ActiveRecord::Base
-  belongs_to :personalization_answer
+  belongs_to :personalization_question
 end
