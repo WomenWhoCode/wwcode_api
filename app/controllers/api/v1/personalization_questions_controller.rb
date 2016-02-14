@@ -15,7 +15,7 @@ class Api::V1::PersonalizationQuestionsController < ApplicationController
 
   def update
     @personalization_question = PersonalizationQuestion.find(params[:id])
-    @personalization_question.updated(objectId: params[:objectId], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @personalization_question.update(objectId: params[:objectId], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
     render :show
   end
 

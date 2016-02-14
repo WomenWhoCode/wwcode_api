@@ -15,7 +15,7 @@ class Api::V1::EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    @event.updated(objectId: params[:objectId], featured: params[:featured], network: params[:network], updatedAt: params[:updatedAt], url: params[:url], event_date: params[:event_date],location: params[:location], title: params[:title], subscribe_count: params[:subscribe_count], createdAt: params[:createdAt], description: params[:description], meetup_event_id: params[:meetup_event_id], time_zone: params[:time_zone], hex_color: params[:hex_color])
+    @event.update(objectId: params[:objectId], featured: params[:featured], network: params[:network], updatedAt: params[:updatedAt], url: params[:url], event_date: params[:event_date],location: params[:location], title: params[:title], subscribe_count: params[:subscribe_count], createdAt: params[:createdAt], description: params[:description], meetup_event_id: params[:meetup_event_id], time_zone: params[:time_zone], hex_color: params[:hex_color])
     render :show
   end
 
