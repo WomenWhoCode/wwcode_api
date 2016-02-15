@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(version: 20160214034244) do
     t.datetime "updated_at"
   end
 
+  create_table "personalization_answers", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "personalization_question_id"
+    t.string   "detail"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
