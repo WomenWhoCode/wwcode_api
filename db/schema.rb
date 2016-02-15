@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214034244) do
+ActiveRecord::Schema.define(version: 20160215221655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160214034244) do
   create_table "events", force: :cascade do |t|
     t.string   "objectId"
     t.boolean  "featured"
-    t.string   "network"
+    t.integer  "network_id"
     t.date     "updatedAt"
     t.string   "url"
     t.string   "event_date"
@@ -64,10 +64,8 @@ ActiveRecord::Schema.define(version: 20160214034244) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-    t.date     "createdAt"
-    t.date     "updatedAt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

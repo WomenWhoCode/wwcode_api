@@ -9,5 +9,12 @@ namespace :parse_data do
     end
   end
 
+  # desc "Import Event Data"
+  # task import_events: :environment do
+  #   json_file = JSON.parse(File.read('../Event.json'))
+  #   p json_file
+  #   json_file.each do |event|
+  #     new_event = Event.create(objectId: event["objectId"], featured: event["featured"], )
+
 
 end
