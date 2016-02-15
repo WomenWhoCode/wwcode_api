@@ -6,7 +6,7 @@ class CreatePersonalizationQuestions < ActiveRecord::Migration
       t.date :createdAt
       t.date :updatedAt
 
-      t.timestamps null: false
+      t.timestamps null: true
     end
   end
 end

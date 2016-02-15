@@ -1,12 +1,13 @@
-namespace :users_namespace do
-  desc "import user data"
+namespace :parse_data do
+  desc "Import User Data"
   task import_users: :environment do
-    File.open('../_User.json', 'r') do |file|
-      file.each do |line|
-        users_attrs = JSON.parse line
-        User.create! users_attrs
-      end
+    json_file = JSON.parse(File.read('../_User.json'))
+    p json_file
+    json_file.each do |user|
+      new_user = User.create(username: user["username"], email: user["email"], password:"password")
+      p new_user
     end
   end
+
 
 end
