@@ -18,4 +18,23 @@ namespace :parse_data do
     end
   end
 
+  desc "Import Network Data"
+  task import_network_data: :environment do
+    Network.all.each do |network|
+      network.destroy
+    end
+    json_file = JSON.parse(File.read('../Network.json'))
+    json_file["results"].each do |network|
+      if network["location"] == nil
+        latitude = nil
+        longitude = nil
+      else
+        latitude = network["location"]["latitude"]
+        longitude = network["location"]["longitude"]
+      end
+      new_network = Network.create(objectId: network["objectId"], awesome_count: network["awesome_count"], image_url: network["image_url"], latitude: latitude, longitude: longitude, meetup_group_id: network["meetup_group_id"], time_zone: network["time_zone"], title: network["title"], createdAt: network["createdAt"], updatedAt: network["updatedAt"])
+      p new_network
+    end
+  end
+
 end
