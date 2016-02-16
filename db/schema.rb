@@ -64,8 +64,23 @@ ActiveRecord::Schema.define(version: 20160215221655) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subscribes", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "event_id"
+    t.integer  "feature_id"
+    t.integer  "network_id"
+    t.boolean  "subscribed"
+    t.integer  "user_id"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
