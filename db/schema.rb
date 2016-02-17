@@ -12,24 +12,31 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160210024556) do
 =======
 ActiveRecord::Schema.define(version: 20160211073836) do
 >>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
+=======
+ActiveRecord::Schema.define(version: 20160215221655) do
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> staging
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
   create_table "events", force: :cascade do |t|
     t.string   "objectId"
     t.boolean  "featured"
-    t.string   "network"
+    t.integer  "network_id"
     t.date     "updatedAt"
     t.string   "url"
     t.string   "event_date"
@@ -42,29 +49,63 @@ ActiveRecord::Schema.define(version: 20160211073836) do
     t.string   "time_zone"
     t.string   "hex_color"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
 =======
 >>>>>>> staging
+=======
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
+=======
+  create_table "networks", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "awesome_count"
+    t.string   "image_url"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "meetup_group_id"
+    t.string   "meetup_url"
+    t.string   "time_zone"
+    t.string   "title"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
 
+  create_table "personalization_answers", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "personalization_question_id"
+    t.string   "detail"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> staging
 >>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
+=======
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
     t.date     "createdAt"
     t.date     "updatedAt"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -96,6 +137,23 @@ ActiveRecord::Schema.define(version: 20160211073836) do
 =======
 >>>>>>> staging
 >>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
+=======
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "subscribes", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "event_id"
+    t.integer  "feature_id"
+    t.integer  "network_id"
+    t.boolean  "subscribed"
+    t.integer  "user_id"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
   end
 
   create_table "users", force: :cascade do |t|

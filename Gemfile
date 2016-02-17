@@ -41,6 +41,7 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
+gem 'seed_dump'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
