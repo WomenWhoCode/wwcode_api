@@ -78,6 +78,16 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.datetime "updated_at"
   end
 
+  create_table "replies", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "child_post_id"
+    t.date     "createdAt"
+    t.string   "parent_post_id"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
     t.string   "uid",                    default: "",      null: false

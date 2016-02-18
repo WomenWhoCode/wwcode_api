@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :personalization_answers
       resources :events
       resources :networks
+      resources :subscribes
       resources :replies
     end
   end
