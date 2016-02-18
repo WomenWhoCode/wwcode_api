@@ -1,0 +1,1 @@
+json.partial! @reply, partial: 'reply', as: :reply
