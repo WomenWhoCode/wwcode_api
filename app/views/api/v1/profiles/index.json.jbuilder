@@ -1,1 +1,1 @@
-json.array! @profile, partial: 'profile', as: :profile
+json.array! @profiles, partial: 'profile', as: :profile
