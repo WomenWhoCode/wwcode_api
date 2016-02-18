@@ -41,10 +41,8 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
-<<<<<<< HEAD
-=======
 gem 'seed_dump'
->>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,11 +59,6 @@ group :development do
   gem 'spring'
 end
 
-
-group :development, :test do
-gem "rspec-rails", "~> 3.1.0"
-gem "factory_girl_rails", "~> 4.4.1"
-end
 
 group :test do
 gem "faker", "~> 1.4.3"
