@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
   root to: "welcome#index"
 
-
-
-  
-
   namespace :api do
     namespace :v1 do
       resources :users
@@ -21,7 +17,12 @@ Rails.application.routes.draw do
       resources :personalization_answers
       resources :events
       resources :networks
+<<<<<<< HEAD
 >>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
+=======
+      resources :subscribes
+      resources :replies
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
     end
   end
 

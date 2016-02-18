@@ -13,6 +13,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160210024556) do
 =======
 ActiveRecord::Schema.define(version: 20160211073836) do
@@ -20,6 +21,9 @@ ActiveRecord::Schema.define(version: 20160211073836) do
 =======
 ActiveRecord::Schema.define(version: 20160215221655) do
 >>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
+=======
+ActiveRecord::Schema.define(version: 20160217055227) do
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,7 +107,15 @@ ActiveRecord::Schema.define(version: 20160215221655) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "child_post_id"
     t.date     "createdAt"
+    t.string   "parent_post_id"
     t.date     "updatedAt"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,14 +154,11 @@ ActiveRecord::Schema.define(version: 20160215221655) do
     t.datetime "updated_at"
   end
 
-  create_table "subscribes", force: :cascade do |t|
+  create_table "replies", force: :cascade do |t|
     t.string   "objectId"
-    t.integer  "event_id"
-    t.integer  "feature_id"
-    t.integer  "network_id"
-    t.boolean  "subscribed"
-    t.integer  "user_id"
+    t.string   "child_post_id"
     t.date     "createdAt"
+    t.string   "parent_post_id"
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
