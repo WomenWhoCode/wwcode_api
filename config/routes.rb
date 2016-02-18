@@ -7,11 +7,22 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       resources :personalization_questions
+<<<<<<< HEAD
+<<<<<<< HEAD
+      resources :profiles
+=======
+      resources :events
+>>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
+=======
       resources :personalization_answers
       resources :events
       resources :networks
+<<<<<<< HEAD
+>>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
+=======
       resources :subscribes
       resources :replies
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
     end
   end
 

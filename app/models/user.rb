@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
           :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
   has_many :subscribes
+  has_one :profile
 end
