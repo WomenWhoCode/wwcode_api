@@ -1,0 +1,1 @@
+json.array! @networks, partial: 'network', as: :network

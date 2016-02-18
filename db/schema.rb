@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160211073836) do
+=======
+ActiveRecord::Schema.define(version: 20160217055227) do
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +23,11 @@ ActiveRecord::Schema.define(version: 20160211073836) do
   create_table "events", force: :cascade do |t|
     t.string   "objectId"
     t.boolean  "featured"
+<<<<<<< HEAD
     t.string   "network"
+=======
+    t.integer  "network_id"
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
     t.date     "updatedAt"
     t.string   "url"
     t.string   "event_date"
@@ -35,15 +43,70 @@ ActiveRecord::Schema.define(version: 20160211073836) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
     t.date     "createdAt"
     t.date     "updatedAt"
+=======
+  create_table "networks", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "awesome_count"
+    t.string   "image_url"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.integer  "meetup_group_id"
+    t.string   "meetup_url"
+    t.string   "time_zone"
+    t.string   "title"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "personalization_answers", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "personalization_question_id"
+    t.string   "detail"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "personalization_questions", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "detail"
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "replies", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "child_post_id"
+    t.date     "createdAt"
+    t.string   "parent_post_id"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "replies", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "child_post_id"
+    t.date     "createdAt"
+    t.string   "parent_post_id"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false
     t.string   "uid",                    default: "",      null: false

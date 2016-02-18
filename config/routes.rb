@@ -7,10 +7,21 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users
       resources :personalization_questions
+<<<<<<< HEAD
       resources :events
     end
   end
   
+=======
+      resources :personalization_answers
+      resources :events
+      resources :networks
+      resources :subscribes
+      resources :replies
+    end
+  end
+
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

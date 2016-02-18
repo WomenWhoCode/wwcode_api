@@ -29,7 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'geocoder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -41,6 +41,10 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
+<<<<<<< HEAD
+=======
+gem 'seed_dump'
+>>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
