@@ -11,14 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20160217055227) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-
 
   create_table "events", force: :cascade do |t|
     t.string   "objectId"
@@ -39,7 +35,6 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.datetime "updated_at"
   end
 
-
   create_table "networks", force: :cascade do |t|
     t.string   "objectId"
     t.integer  "awesome_count"
@@ -56,7 +51,6 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.datetime "updated_at"
   end
 
-
   create_table "personalization_answers", force: :cascade do |t|
     t.string   "objectId"
     t.integer  "personalization_question_id"
@@ -67,23 +61,14 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.datetime "updated_at"
   end
 
-
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "replies", force: :cascade do |t|
-    t.string   "objectId"
-    t.string   "child_post_id"
     t.date     "createdAt"
-    t.string   "parent_post_id"
     t.date     "updatedAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string   "objectId"
@@ -96,10 +81,10 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.string   "photo"
     t.integer  "theme_type"
     t.integer  "userId"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-
-  
+    t.datetime "createdAt"
+    t.datetime "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "replies", force: :cascade do |t|
@@ -110,7 +95,19 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
 
+  create_table "subscribes", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "event_id"
+    t.integer  "feature_id"
+    t.integer  "network_id"
+    t.boolean  "subscribed"
+    t.integer  "user_id"
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
