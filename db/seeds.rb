@@ -62,3 +62,4 @@ Network.create!([
   {objectId: "yAQJdLbAa8", awesome_count: nil, image_url: "https://www.filepicker.io/api/file/IWgXaAcfRS6o8mHRvRIm", latitude: nil, longitude: nil, meetup_group_id: nil, meetup_url: nil, time_zone: nil, title: "Charleston", createdAt: "2015-10-17", updatedAt: "2015-10-17"},
   {objectId: "zHgV4yF8M6", awesome_count: nil, image_url: "https://www.filepicker.io/api/file/aXYj6bUTwqQEJDkOOUaZ", latitude: 33.4500007629395, longitude: -112.080001831055, meetup_group_id: 17518042, meetup_url: nil, time_zone: nil, title: "Phoenix", createdAt: "2015-10-17", updatedAt: "2015-10-17"}
 ])
+

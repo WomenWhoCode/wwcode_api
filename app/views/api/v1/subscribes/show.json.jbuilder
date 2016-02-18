@@ -1,0 +1,1 @@
+json.partial! @subscribe, partial: 'subscribe', as: :subscribe
