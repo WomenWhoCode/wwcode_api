@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :events
       resources :networks
       resources :subscribes
+      resources :replies
     end
   end
 

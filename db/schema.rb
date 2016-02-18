@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.string   "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
   end
 
   create_table "replies", force: :cascade do |t|
@@ -76,16 +77,15 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
+=======
+>>>>>>> reply_model
   end
 
-  create_table "subscribes", force: :cascade do |t|
+  create_table "replies", force: :cascade do |t|
     t.string   "objectId"
-    t.integer  "event_id"
-    t.integer  "feature_id"
-    t.integer  "network_id"
-    t.boolean  "subscribed"
-    t.integer  "user_id"
+    t.string   "child_post_id"
     t.date     "createdAt"
+    t.string   "parent_post_id"
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
