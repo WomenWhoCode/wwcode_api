@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-  skip_before_filter :authenticate_user!
   
   def index
     @users = User.all
