@@ -1,5 +1,5 @@
 class Api::V1::RepliesController < ApplicationController
-  before_filter :authenticate_user! except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def show
     @reply = Reply.find(params[:id])
