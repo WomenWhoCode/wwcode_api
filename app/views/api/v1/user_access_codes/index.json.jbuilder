@@ -1,0 +1,1 @@
+json.array! @user_access_codes, partial: 'user_access_code', as: :user_access_code
