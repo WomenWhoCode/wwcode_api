@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20160218231523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
   create_table "events", force: :cascade do |t|
     t.string   "objectId"
     t.boolean  "featured"
@@ -30,24 +31,10 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.string   "meetup_event_id"
     t.string   "time_zone"
     t.string   "hex_color"
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
-=======
->>>>>>> staging
-=======
->>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  add_index "users", ["email"], name: "index_users_on_email", using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  add_index "users", ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
-=======
   create_table "networks", force: :cascade do |t|
     t.string   "objectId"
     t.integer  "awesome_count"
@@ -63,7 +50,6 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
->>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
 
   create_table "personalization_answers", force: :cascade do |t|
     t.string   "objectId"
@@ -75,18 +61,13 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> staging
->>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
-=======
->>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.date     "createdAt"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -112,39 +93,6 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.date     "createdAt"
     t.string   "parent_post_id"
     t.date     "updatedAt"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-<<<<<<< HEAD
-  end
->>>>>>> staging
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "objectId"
-    t.string   "full_name"
-    t.string   "image_url"
-    t.string   "job_title"
-    t.decimal  "latitude",   precision: 15, scale: 10
-    t.decimal  "longitude",  precision: 15, scale: 10
-    t.string   "network"
-    t.string   "photo"
-    t.integer  "theme_type"
-    t.integer  "userId"
-    t.datetime "createdAt"
-    t.datetime "updatedAt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-=======
-<<<<<<< HEAD
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-=======
->>>>>>> staging
->>>>>>> 8c5ff618bd5bdb34268fe1903ab9b633b809d4f3
-=======
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -170,7 +118,6 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
->>>>>>> 13c3fc92bc5593d6cb1a7422d59aa13ae33837d0
   end
 
   create_table "users", force: :cascade do |t|
