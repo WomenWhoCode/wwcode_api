@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :networks
       resources :subscribes
       resources :replies
+      resources :user_access_codes
     end
   end
 
