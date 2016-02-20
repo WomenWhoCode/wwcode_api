@@ -1,0 +1,10 @@
+json.id post.id
+json.objectId post.objectId
+json.awesome_account post.awesome_account
+json.description post.description
+json.eventId post.eventId
+json.featureId post.featureId
+json.photo post.photo
+json.userId post.userId
+json.createdAt post.createdAt
+json.updatedAt post.updatedAt

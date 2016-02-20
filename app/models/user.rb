@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
   has_many :subscribes
   has_one :profile
+  has_many :posts
 end

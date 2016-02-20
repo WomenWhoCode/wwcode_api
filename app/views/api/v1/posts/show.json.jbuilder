@@ -1,0 +1,1 @@
+json.partial! @post, partial: 'post', as: :post
