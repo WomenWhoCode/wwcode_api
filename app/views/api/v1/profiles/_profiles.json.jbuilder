@@ -8,7 +8,7 @@ json.longitude profile.longitude
 json.network profile.network
 json.photo profile.photo
 json.theme_type profile.theme_type
-json.userId profile.userId
+json.user_id profile.user_id
 json.createdAt profile.createdAt
 json.updatedAt profile.updatedAt
 
