@@ -30,3 +30,4 @@ class Api::V1::ProfilesController < ApplicationController
     Profile.find(params[:id]).destroy
     format.json {render json: "Profile Deleted"}
   end
+end
