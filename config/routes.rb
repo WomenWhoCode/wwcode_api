@@ -7,7 +7,6 @@
     namespace :v1 do
       resources :users
       resources :personalization_questions
-      resources :profiles
       resources :personalization_answers
       resources :events
       resources :networks
@@ -15,6 +14,7 @@
       resources :replies
       resources :user_access_codes
       resources :post
+      resources :profiles
     end
   end
 
