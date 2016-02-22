@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20160218231523) do
+ActiveRecord::Schema.define(version: 20160221200215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,31 +64,9 @@ ActiveRecord::Schema.define(version: 20160218231523) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-    t.date     "createdAt"
-    t.date     "updatedAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-
-  create_table "posts", force: :cascade do |t|
-
-
-
-  create_table "replies", force: :cascade do |t|
-    t.string   "objectId"
-    t.integer  "awesome_count"
-    t.string   "description"
-    t.string   "event_id"
-    t.string   "feature_id"
-    t.string   "photo"
-    t.string   "user_id"
-    t.date     "createdAt"
-    t.date     "updatedAt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 
   create_table "profiles", force: :cascade do |t|
     t.string   "objectId"
@@ -108,12 +85,11 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.datetime "updated_at"
   end
 
-
-  create_table "user_access_codes", force: :cascade do |t|
+  create_table "replies", force: :cascade do |t|
     t.string   "objectId"
-    t.string   "email"
-    t.string   "token"
+    t.string   "child_post_id"
     t.date     "createdAt"
+    t.string   "parent_post_id"
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
