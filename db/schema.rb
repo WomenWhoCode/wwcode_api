@@ -70,13 +70,20 @@ ActiveRecord::Schema.define(version: 20160221200215) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "replies", force: :cascade do |t|
     t.string   "objectId"
     t.integer  "awesome_account"
+=======
+  create_table "posts", force: :cascade do |t|
+    t.string   "objectId"
+    t.integer  "awesome_count"
+>>>>>>> 207522b7173631c4cac654484cbf8e02330fbc5a
     t.string   "description"
-    t.string   "eventId"
-    t.string   "featureId"
+    t.string   "event_id"
+    t.string   "feature_id"
     t.string   "photo"
+<<<<<<< HEAD
     t.string   "userId"
   create_table "posts", force: :cascade do |t|
     t.string   "objectId"
@@ -85,6 +92,8 @@ ActiveRecord::Schema.define(version: 20160221200215) do
     t.string   "event_id"
     t.string   "feature_id"
     t.string   "photo"
+=======
+>>>>>>> 207522b7173631c4cac654484cbf8e02330fbc5a
     t.string   "user_id"
     t.date     "createdAt"
     t.date     "updatedAt"
@@ -109,6 +118,7 @@ ActiveRecord::Schema.define(version: 20160221200215) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "user_access_codes", force: :cascade do |t|
     t.string   "objectId"
     t.string   "email"
@@ -133,10 +143,13 @@ ActiveRecord::Schema.define(version: 20160221200215) do
   end
 
   create_table "user_access_codes", force: :cascade do |t|
+=======
+  create_table "replies", force: :cascade do |t|
+>>>>>>> 207522b7173631c4cac654484cbf8e02330fbc5a
     t.string   "objectId"
-    t.string   "email"
-    t.string   "token"
+    t.string   "child_post_id"
     t.date     "createdAt"
+    t.string   "parent_post_id"
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
