@@ -1,5 +1,6 @@
 class Api::V1::PostsController < ApplicationController
-
+  before_filter :authenticate_user!, except: [:index, :show]
+  
   def index
     @posts = Post.all
   end
@@ -21,6 +22,6 @@ class Api::V1::PostsController < ApplicationController
 
   def destroy
     Post.find(params[:id]).destroy
-    render json: "Post Deleted"
+    format.json {render json: "Post Deleted"}
   end
 end
