@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
   # devise_for :users
   mount_devise_token_auth_for 'User', at: 'auth'
   root to: "welcome#index"
@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       resources :subscribes
       resources :replies
       resources :profiles
+      resources :user_access_codes
+
     end
   end
 

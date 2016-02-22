@@ -1,0 +1,1 @@
+json.partial! @user_access_code, partial: 'user_access_code', as: :user_access_code
