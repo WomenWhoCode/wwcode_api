@@ -11,12 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 
-ActiveRecord::Schema.define(version: 20160217055227) do
-=======
 ActiveRecord::Schema.define(version: 20160221200215) do
->>>>>>> d645854ae381c97b99899a68d4893589367c50fa
+
 
 
   # These are extensions that must be enabled in order to support this database
@@ -76,8 +73,7 @@ ActiveRecord::Schema.define(version: 20160221200215) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
-=======
+
   create_table "profiles", force: :cascade do |t|
     t.string   "objectId"
     t.string   "full_name"
@@ -94,7 +90,7 @@ ActiveRecord::Schema.define(version: 20160221200215) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
->>>>>>> d645854ae381c97b99899a68d4893589367c50fa
+
 
   create_table "replies", force: :cascade do |t|
     t.string   "objectId"

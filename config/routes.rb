@@ -13,11 +13,8 @@
       resources :subscribes
       resources :replies
       resources :profiles
-<<<<<<< HEAD
-=======
       resources :user_access_codes
 
->>>>>>> d645854ae381c97b99899a68d4893589367c50fa
     end
   end
 
