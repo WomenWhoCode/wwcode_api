@@ -11,8 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 
 ActiveRecord::Schema.define(version: 20160217055227) do
+=======
+ActiveRecord::Schema.define(version: 20160221200215) do
+>>>>>>> d645854ae381c97b99899a68d4893589367c50fa
 
 
   # These are extensions that must be enabled in order to support this database
@@ -72,6 +76,25 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "profiles", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "full_name"
+    t.string   "image_url"
+    t.string   "job_title"
+    t.decimal  "latitude",   precision: 15, scale: 10
+    t.decimal  "longitude",  precision: 15, scale: 10
+    t.string   "network"
+    t.string   "photo"
+    t.integer  "theme_type"
+    t.integer  "user_id"
+    t.datetime "createdAt"
+    t.datetime "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+>>>>>>> d645854ae381c97b99899a68d4893589367c50fa
 
   create_table "replies", force: :cascade do |t|
     t.string   "objectId"
@@ -83,11 +106,24 @@ ActiveRecord::Schema.define(version: 20160217055227) do
     t.datetime "updated_at"
   end
 
-  create_table "replies", force: :cascade do |t|
+  create_table "subscribes", force: :cascade do |t|
     t.string   "objectId"
-    t.string   "child_post_id"
+    t.integer  "event_id"
+    t.integer  "feature_id"
+    t.integer  "network_id"
+    t.boolean  "subscribed"
+    t.integer  "user_id"
     t.date     "createdAt"
-    t.string   "parent_post_id"
+    t.date     "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_access_codes", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "email"
+    t.string   "token"
+    t.date     "createdAt"
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
