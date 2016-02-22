@@ -9,13 +9,13 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(objectId: params[:objectId], awesome_account: params[:awesome_account], description: params[:description], eventId: params[:eventId], featureId: params[:featureId], photo: params[:photo], userId: params[:userId], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @post = Post.create(objectId: params[:objectId], awesome_count: params[:awesome_count], description: params[:description], event_id: params[:event_id], feature_id: params[:feature_id], photo: params[:photo], user_id: params[:user_id], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
     render :show
   end
 
   def update
     @post = Post.find(params[:id])
-    @post.update(objectId: params[:objectId], awesome_account: params[:awesome_account], description: params[:description], eventId: params[:eventId], featureId: params[:featureId], photo: params[:photo], userId: params[:userId], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @post.update(objectId: params[:objectId], awesome_count: params[:awesome_count], description: params[:description], event_id: params[:event_id], feature_id: params[:feature_id], photo: params[:photo], user_id: params[:user_id], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
     render :show
   end
 

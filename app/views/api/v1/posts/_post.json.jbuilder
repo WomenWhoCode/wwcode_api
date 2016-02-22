@@ -1,10 +1,10 @@
 json.id post.id
 json.objectId post.objectId
-json.awesome_account post.awesome_account
+json.awesome_count post.awesome_count
 json.description post.description
-json.eventId post.eventId
-json.featureId post.featureId
+json.event_id post.event_id
+json.feature_id post.feature_id
 json.photo post.photo
-json.userId post.userId
+json.user_id post.user_id
 json.createdAt post.createdAt
 json.updatedAt post.updatedAt
