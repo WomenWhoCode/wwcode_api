@@ -14,7 +14,9 @@
       resources :networks
       resources :subscribes
       resources :replies
+      resources :profiles
       resources :user_access_codes
+
     end
   end
 
