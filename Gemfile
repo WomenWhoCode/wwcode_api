@@ -43,6 +43,7 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'seed_dump'
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -58,11 +59,13 @@ group :development do
   gem 'spring'
 end
 
+
 group :test do
-  gem 'faker', '~> 1.4.3'
-  gem 'capybara', '~> 2.4.3'
-  gem 'database_cleaner', '~> 1.3.0'
-  gem 'launchy', '~> 2.4.2'
-  gem 'selenium-webdriver', '~> 2.43.0'
+gem "faker", "~> 1.4.3"
+gem "capybara", "~> 2.4.3"
+gem "database_cleaner", "~> 1.3.0"
+gem "launchy", "~> 2.4.2"
+gem "selenium-webdriver", "~> 2.43.0"
 end
+
 
