@@ -1,11 +1,8 @@
 json.id event.id
 json.objectId event.objectId
 json.featured event.featured
-<<<<<<< HEAD
 json.network event.network
-=======
 json.network_id event.network_id
->>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
 json.updatedAt event.updatedAt
 json.url event.url
 json.event_date event.event_date
