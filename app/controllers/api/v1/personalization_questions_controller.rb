@@ -16,11 +16,7 @@ class Api::V1::PersonalizationQuestionsController < ApplicationController
 
   def update
     @personalization_question = PersonalizationQuestion.find(params[:id])
-<<<<<<< HEAD
-    @personalization_question.updated(objectId: params[:objectId], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
-=======
     @personalization_question.update(objectId: params[:objectId], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
->>>>>>> 3b66ce485b782af4aba0c14478d8f314fa29b142
     render :show
   end
 
