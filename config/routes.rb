@@ -1,6 +1,8 @@
  Rails.application.routes.draw do
   # devise_for :users
-  mount_devise_token_auth_for 'User', at: 'auth'
+  post '/auth', to: 'users/registrations#create' 
+
+  mount_devise_token_auth_for 'User', at: 'auth', controllers: { sessions: "users/sessions" }
   root to: "welcome#index"
 
   namespace :api do
