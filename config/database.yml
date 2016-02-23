@@ -58,6 +58,18 @@ development:
 test:
   <<: *default
   database: ww-code-api_test 
+  # <<: *default
+  adapter: postgresql
+  encoding: utf8
+  database: ww-code-api_test
+  pool: 5
+  username: root
+  password:  
+
+
+  <<: *default
+  database: ww-code-api_test 
+
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
