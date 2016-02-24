@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160218231523) do
+=======
+
+ActiveRecord::Schema.define(version: 20160221200215) do
+
+
+>>>>>>> acb528a6fef97843103110958afb65823b1fc067
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160218231523) do
   create_table "events", force: :cascade do |t|
     t.string   "objectId"
     t.boolean  "featured"
+    t.string   "network"
     t.integer  "network_id"
     t.date     "updatedAt"
     t.string   "url"
@@ -34,6 +42,7 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 
   create_table "networks", force: :cascade do |t|
     t.string   "objectId"
@@ -64,6 +73,7 @@ ActiveRecord::Schema.define(version: 20160218231523) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
+<<<<<<< HEAD
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,10 +91,36 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.integer  "userId"
     t.datetime "createdAt"
     t.datetime "updatedAt"
+=======
+    t.date     "createdAt"
+    t.date     "updatedAt"
+>>>>>>> acb528a6fef97843103110958afb65823b1fc067
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
+=======
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "objectId"
+    t.string   "full_name"
+    t.string   "image_url"
+    t.string   "job_title"
+    t.decimal  "latitude",   precision: 15, scale: 10
+    t.decimal  "longitude",  precision: 15, scale: 10
+    t.string   "network"
+    t.string   "photo"
+    t.integer  "theme_type"
+    t.integer  "user_id"
+    t.datetime "createdAt"
+    t.datetime "updatedAt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+
+>>>>>>> acb528a6fef97843103110958afb65823b1fc067
   create_table "replies", force: :cascade do |t|
     t.string   "objectId"
     t.string   "child_post_id"
@@ -117,6 +153,7 @@ ActiveRecord::Schema.define(version: 20160218231523) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 
   create_table "users", force: :cascade do |t|
     t.string   "provider",               default: "email", null: false

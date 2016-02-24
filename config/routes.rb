@@ -1,6 +1,17 @@
  Rails.application.routes.draw do
   # devise_for :users
-  mount_devise_token_auth_for 'User', at: 'auth'
+  # get '/auth', to: 'users/registrations#index'
+  devise_scope :user do
+    get '/auth/sign_up', to: 'users/registrations#new'
+    post '/auth', to: 'users/registrations#create'
+    get '/auth/:id', to: 'users/registrations#show'
+    get '/auth/:id/edit', to: 'users/registrations#edit'
+    patch '/auth/:id/', to: 'users/registrations#update'
+    delete '/auth/:id/', to: 'users/registrations#destroy'
+  end
+
+
+  mount_devise_token_auth_for 'User', at: 'auth', controllers: { sessions: "users/sessions" }
   root to: "welcome#index"
 
   namespace :api do
@@ -12,9 +23,15 @@
       resources :networks
       resources :subscribes
       resources :replies
+<<<<<<< HEAD
       resources :user_access_codes
       resources :post
       resources :profiles
+=======
+      resources :profiles
+      resources :user_access_codes
+
+>>>>>>> acb528a6fef97843103110958afb65823b1fc067
     end
   end
 
