@@ -23,15 +23,9 @@
       resources :networks
       resources :subscribes
       resources :replies
-<<<<<<< HEAD
       resources :user_access_codes
       resources :post
       resources :profiles
-=======
-      resources :profiles
-      resources :user_access_codes
-
->>>>>>> acb528a6fef97843103110958afb65823b1fc067
     end
   end
 

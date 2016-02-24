@@ -11,14 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160218231523) do
-=======
 
 ActiveRecord::Schema.define(version: 20160221200215) do
 
 
->>>>>>> acb528a6fef97843103110958afb65823b1fc067
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,34 +69,12 @@ ActiveRecord::Schema.define(version: 20160221200215) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-<<<<<<< HEAD
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "profiles", force: :cascade do |t|
-    t.string   "objectId"
-    t.string   "full_name"
-    t.string   "image_url"
-    t.string   "job_title"
-    t.decimal  "latitude",   precision: 15, scale: 10
-    t.decimal  "longitude",  precision: 15, scale: 10
-    t.string   "network"
-    t.string   "photo"
-    t.integer  "theme_type"
-    t.integer  "userId"
-    t.datetime "createdAt"
-    t.datetime "updatedAt"
-=======
     t.date     "createdAt"
     t.date     "updatedAt"
->>>>>>> acb528a6fef97843103110958afb65823b1fc067
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
-=======
 
   create_table "profiles", force: :cascade do |t|
     t.string   "objectId"
@@ -120,7 +94,6 @@ ActiveRecord::Schema.define(version: 20160221200215) do
   end
 
 
->>>>>>> acb528a6fef97843103110958afb65823b1fc067
   create_table "replies", force: :cascade do |t|
     t.string   "objectId"
     t.string   "child_post_id"
