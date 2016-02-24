@@ -1,5 +1,4 @@
 class Api::V1::PersonalizationAnswersController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @personalization_answers = PersonalizationAnswer.all
