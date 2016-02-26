@@ -1,5 +1,7 @@
 class Users::SessionsController < Devise::SessionsController
 # before_filter :configure_sign_in_params, only: [:create]
+  prepend_before_filter :require_no_authentication, :only => [ :new, :create ]
+
 
   # GET /resource/sign_in
   # def new
