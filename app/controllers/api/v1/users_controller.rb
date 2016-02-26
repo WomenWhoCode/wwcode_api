@@ -23,4 +23,12 @@ class Api::V1::UsersController < ApplicationController
     User.find(params[:id]).destroy
     render json: "User Deleted"
   end
+
+  def user_events
+    user = User.find(user_id)
+    network = user.network
+    events = network.events
+    network["events"] = events
+    render json: network.to_json
+  end
 end
