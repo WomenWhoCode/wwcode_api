@@ -8,3 +8,12 @@ json.photo post.photo
 json.user_id post.user_id
 json.createdAt post.createdAt
 json.updatedAt post.updatedAt
+end 
+
+json.id reply.id do |reply|
+json.objectId reply.objectId
+json.child_post_id reply.child_post_id
+json.createdAt reply.createdAt
+json.parent_post_id reply.parent_post_id
+json.updatedAt reply.updatedAt
+end
