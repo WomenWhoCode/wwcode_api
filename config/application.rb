@@ -42,10 +42,20 @@ module WwCodeApi
         g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
 
+    # config.middleware.use Rack::Cors do
+    #   allow do
+    #     origins 'localhost:3000', 'staging-wwcode-client.herokuapp.com/', 'staging-wwcode-api.herokuapp.com/', 'production-wwcode-api.herokuapp.com/', 'production-wwcode-client.herokuapp.com/',
+    #     resource '*',
+    #       :headers => :any,
+    #       :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+    #       :methods => [:get, :post, :options, :delete, :put]
+    #   end
+    # end
+
     config.middleware.use Rack::Cors do
       allow do
-        origins 'localhost:3000', 'staging-wwcode-client.herokuapp.com/', 'staging-wwcode-api.herokuapp.com/', ''
-        resource '*', 'production-wwcode-api.herokuapp.com/', 'production-wwcode-client.herokuapp.com/'
+        origins '*'
+        resource '*',
           :headers => :any,
           :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
           :methods => [:get, :post, :options, :delete, :put]
