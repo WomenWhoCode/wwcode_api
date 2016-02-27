@@ -24,7 +24,7 @@
       resources :subscribes
       resources :replies
       resources :user_access_codes
-      resources :post
+      resources :posts
       resources :profiles
     end
   end
