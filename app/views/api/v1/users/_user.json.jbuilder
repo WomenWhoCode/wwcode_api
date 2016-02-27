@@ -7,3 +7,5 @@ json.phone user.phone
 json.profile_id user.profile_id
 json.created_at user.created_at
 json.updated_at user.updated_at
+json.access_code user.access_code
+json.personalization_details user.personalization_details
