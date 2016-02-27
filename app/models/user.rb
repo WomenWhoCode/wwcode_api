@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
   has_many :subscribes
   has_one :profile
   has_many :posts
+  belongs_to :network
 end
