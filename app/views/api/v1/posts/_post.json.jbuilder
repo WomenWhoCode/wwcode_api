@@ -9,6 +9,7 @@ json.user_id post.user_id
 json.createdAt post.createdAt
 json.updatedAt post.updatedAt
 end 
+
 json.id reply.id do |reply|
 json.objectId reply.objectId
 json.child_post_id reply.child_post_id
