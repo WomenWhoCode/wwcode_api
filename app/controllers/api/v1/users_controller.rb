@@ -25,6 +25,7 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def user_events
+    user_id = params[:user_id]
     user = User.find(user_id)
     profile = user.profile
     network = user.network

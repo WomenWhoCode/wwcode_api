@@ -1,1 +1,1 @@
-json.partial! @post, partial: 'post', as: :post
+hjson.partial! @post, partial: 'post', as: :post
