@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227163737) do
+ActiveRecord::Schema.define(version: 20160228233041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,8 +64,6 @@ ActiveRecord::Schema.define(version: 20160227163737) do
   create_table "personalization_questions", force: :cascade do |t|
     t.string   "objectId"
     t.string   "detail"
-    t.date     "createdAt"
-    t.date     "updatedAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -110,6 +108,7 @@ ActiveRecord::Schema.define(version: 20160227163737) do
     t.date     "updatedAt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "post_id"
   end
 
   create_table "subscribes", force: :cascade do |t|
