@@ -38,7 +38,7 @@ gem 'geocoder'
 gem 'rails_12factor', group: :production
 
 #addl added gems
-gem 'devise'
+# gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
 gem 'seed_dump'
