@@ -37,4 +37,13 @@ namespace :parse_data do
     end
   end
 
+  desc "Import Profile Data"
+  task import_profiles: :environment do
+    json_file = JSON.parse(File.read('../Profile.json'))
+    json_file["results"].each do |profile|
+      new_profile = Profile.create(objectId: profile["objectID"], full_name: profile["full_name"],image_url: profile["image_url"], job_title: profile["job_title"], photo: profile["photo"], theme_type: profile["theme_type"], createdAt: profile["createdAt"], updatedAt: profile["updatedAt"])
+      p new_profile
+    end
+  end
+
 end
