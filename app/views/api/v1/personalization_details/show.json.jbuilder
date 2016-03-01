@@ -1,0 +1,1 @@
+json.partial! @personalization_detail, partial: 'personalization_detail', as: :personalization_detail
