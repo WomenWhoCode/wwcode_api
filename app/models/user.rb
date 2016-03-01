@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
   has_one :profile
   has_many :posts
   belongs_to :network
+  validates :username, presence: true
+
 
 end

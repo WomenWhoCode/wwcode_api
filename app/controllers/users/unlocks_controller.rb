@@ -1,4 +1,4 @@
-class Users::UnlocksController < Devise::UnlocksController
+class Users::UnlocksController < DeviseTokenAuth::UnlocksController
   # GET /resource/unlock/new
   # def new
   #   super
