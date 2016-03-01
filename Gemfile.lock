@@ -224,6 +224,7 @@ DEPENDENCIES
   capybara (~> 2.4.3)
   coffee-rails (~> 4.1.0)
   database_cleaner (~> 1.3.0)
+  devise
   devise_token_auth
   factory_girl_rails (~> 4.4.1)
   faker (~> 1.4.3)
