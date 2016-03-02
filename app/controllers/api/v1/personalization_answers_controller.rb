@@ -9,13 +9,13 @@ class Api::V1::PersonalizationAnswersController < ApplicationController
   end
 
   def create 
-    @personalization_answer = PersonalizationAnswer.create(objectId: params[:objectId], personalization_question_id: params[:personalization_question_id], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @personalization_answer = PersonalizationAnswer.create(personalization_question_id: params[:personalization_question_id], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
     render :show
   end
 
   def update
     @personalization_answer = PersonalizationAnswer.find(params[:id])
-    @personalization_answer.update(objectId: params[:objectId], personalization_question_id: params[:personalization_question_id], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @personalization_answer.update(personalization_question_id: params[:personalization_question_id], detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
     render :show
   end
 

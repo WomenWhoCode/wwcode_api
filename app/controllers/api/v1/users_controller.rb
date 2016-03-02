@@ -9,13 +9,13 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id], access_code: params[:access_code], personalization_details: params[:personalization_details])
+    @user = User.create(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id])
     render :show
   end
 
   def update
     @user = User.find(params[:id])
-    @user.update(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id], access_code: params[:access_code], personalization_details: params[:personalization_details])
+    @user.update(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id])
     render :show
   end
 
