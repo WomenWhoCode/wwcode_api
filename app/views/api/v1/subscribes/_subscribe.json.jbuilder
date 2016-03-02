@@ -1,5 +1,4 @@
 json.id subscribe.id
-json.objectId subscribe.objectId
 json.event_id subscribe.event_id
 json.feature_id subscribe.feature_id
 json.network_id subscribe.network_id

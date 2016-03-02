@@ -1,5 +1,4 @@
 json.id post.id
-json.objectId post.objectId
 json.awesome_count post.awesome_count
 json.description post.description
 json.event_id post.event_id
@@ -11,7 +10,6 @@ json.updatedAt post.updatedAt
 end 
 
 json.id reply.id do |reply|
-json.objectId reply.objectId
 json.child_post_id reply.child_post_id
 json.createdAt reply.createdAt
 json.parent_post_id reply.parent_post_id

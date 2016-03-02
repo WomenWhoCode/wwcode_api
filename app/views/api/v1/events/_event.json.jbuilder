@@ -1,5 +1,4 @@
 json.id event.id
-json.objectId event.objectId
 json.featured event.featured
 json.network_id event.network_id
 json.updatedAt event.updatedAt
