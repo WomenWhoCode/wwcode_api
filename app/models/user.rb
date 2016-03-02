@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_one :profile
   has_many :posts
   belongs_to :network
+  has_many :personalization_details
   validates :username, presence: true
 
 
