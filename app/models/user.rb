@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :posts
   belongs_to :network
   has_many :personalization_details
-  validates :username, presence: true
+  validates :username, :password, :access_code, presence: true
 
 
 end

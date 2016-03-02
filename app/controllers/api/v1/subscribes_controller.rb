@@ -9,13 +9,13 @@ class Api::V1::SubscribesController < ApplicationController
   end
 
   def create
-    @subscribe = Subscribe.create(objectId: params[:objectId], event_id: params[:event_id], feature_id: params[:feature_id], network_id: params[:network_id], subscribed: params[:subscribed], user_id: params[:user_id], createdAt: Time.now, updatedAt: Time.now)
+    @subscribe = Subscribe.create(event_id: params[:event_id], feature_id: params[:feature_id], network_id: params[:network_id], subscribed: params[:subscribed], user_id: params[:user_id], createdAt: Time.now, updatedAt: Time.now)
     render :show
   end
 
   def update
     @subscribe = Subscribe.find(params[:id])
-    @subscribe.update(objectId: params[:objectId], event_id: params[:event_id], feature_id: params[:feature_id], network_id: params[:network_id], subscribed: params[:subscribed], user_id: params[:user_id], updatedAt: Time.now)
+    @subscribe.update(event_id: params[:event_id], feature_id: params[:feature_id], network_id: params[:network_id], subscribed: params[:subscribed], user_id: params[:user_id], updatedAt: Time.now)
     render :show
   end
 

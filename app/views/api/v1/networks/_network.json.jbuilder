@@ -1,5 +1,4 @@
 json.id network.id
-json.objectId network.objectId
 json.awesome_count network.awesome_count
 json.image_url network.image_url
 json.latitude network.latitude
