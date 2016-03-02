@@ -26,6 +26,7 @@
       resources :user_access_codes
       resources :posts
       resources :profiles
+      resources :personalization_details
     end
   end
 
