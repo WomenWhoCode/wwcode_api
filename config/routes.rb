@@ -16,6 +16,7 @@
 
   namespace :api do
     namespace :v1 do
+      get '/users/events', to: 'users#user_events'
       resources :users
       resources :personalization_questions
       resources :personalization_answers
