@@ -30,7 +30,6 @@ class Api::V1::UsersController < ApplicationController
     profile = user.profile
     network = user.network
     events = network.events
-    network["events"] = events
-    render json: network.to_json
+    render json: network.to_json(include: :events)
   end
 end
