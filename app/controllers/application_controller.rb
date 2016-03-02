@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:index, :show]
   respond_to :json
   protected
 
