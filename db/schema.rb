@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301211708) do
+ActiveRecord::Schema.define(version: 20160302044049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string   "objectId"
     t.boolean  "featured"
     t.integer  "network_id"
     t.date     "updatedAt"
@@ -36,7 +35,6 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "networks", force: :cascade do |t|
-    t.string   "objectId"
     t.integer  "awesome_count"
     t.string   "image_url"
     t.float    "latitude"
@@ -52,7 +50,6 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "personalization_answers", force: :cascade do |t|
-    t.string   "objectId"
     t.integer  "personalization_question_id"
     t.string   "detail"
     t.date     "createdAt"
@@ -71,16 +68,14 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "personalization_questions", force: :cascade do |t|
-    t.string   "objectId"
     t.string   "detail"
     t.date     "createdAt"
     t.date     "updatedAt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "objectId"
     t.integer  "awesome_count"
     t.string   "description"
     t.string   "photo"
@@ -94,7 +89,6 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string   "objectId"
     t.string   "full_name"
     t.string   "image_url"
     t.string   "job_title"
@@ -112,7 +106,6 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "replies", force: :cascade do |t|
-    t.string   "objectId"
     t.string   "child_post_id"
     t.date     "createdAt"
     t.string   "parent_post_id"
@@ -123,7 +116,6 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "subscribes", force: :cascade do |t|
-    t.string   "objectId"
     t.integer  "event_id"
     t.integer  "feature_id"
     t.integer  "network_id"
@@ -136,7 +128,6 @@ ActiveRecord::Schema.define(version: 20160301211708) do
   end
 
   create_table "user_access_codes", force: :cascade do |t|
-    t.string   "objectId"
     t.string   "email"
     t.string   "token"
     t.date     "createdAt"
