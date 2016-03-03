@@ -1,6 +1,6 @@
 class Users::RegistrationsController < DeviseTokenAuth::RegistrationsController
     skip_before_filter :authenticate_user!, except: [:index, :show]
-skip_before_filter  :verify_authenticity_token, only: [:create]
+    skip_before_filter  :verify_authenticity_token, only: [:create]
   # prepend_before_filter :require_no_authentication, :only => [ :new, :create ]
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
@@ -12,6 +12,15 @@ respond_to :html, :json
 
   # POST /resource
   def create
+    p "so cool"
+    p params[:access_code]
+    access_code = UserAccessCode.find_by(token: params[:access_code])
+    p access_code
+    if access_code == nil
+      @user.errors.add(:access_code, "does not exist")
+    elsif access_code.email != params[:email]
+      @user.errors.add(:access_code, "does not match e-mail address")
+    end
     super
   end
 
