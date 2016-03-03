@@ -13,14 +13,14 @@ respond_to :html, :json
   # POST /resource
   def create
     p "so cool"
-    p params[:access_code]
-    access_code = UserAccessCode.find_by(token: params[:access_code])
-    p access_code
-    if access_code == nil
-      @user.errors.add(:access_code, "does not exist")
-    elsif access_code.email != params[:email]
-      @user.errors.add(:access_code, "does not match e-mail address")
-    end
+    # p params[:access_code]
+    # access_code = UserAccessCode.find_by(token: params[:access_code])
+    # p access_code
+    # if access_code == nil
+    #   @user.errors.add(:access_code, "does not exist")
+    # elsif access_code.email != params[:email]
+    #   @user.errors.add(:access_code, "does not match e-mail address")
+    # end
     super
   end
 
