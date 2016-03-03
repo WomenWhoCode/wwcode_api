@@ -7,7 +7,7 @@
     get '/auth/:id', to: 'users/registrations#show'
     get '/auth/:id/edit', to: 'users/registrations#edit'
     patch '/auth/:id/', to: 'users/registrations#update'
-    delete '/auth/sign_out', to: 'users/registrations#destroy'
+    delete '/auth/:id', to: 'users/registrations#destroy'
   end
 
 
