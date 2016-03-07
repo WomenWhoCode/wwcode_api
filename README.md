@@ -7,11 +7,13 @@ This API is a REST API built with Ruby on Rails. Currently, return format for al
 
 #Installation
 Open terminal and clone the GitHub repository 
+
 `$ git clone git@github.com:WomenWhoCode/ww-code-api.git`
 
 Add Heroku remotes for both the staging and production environments
-`$ git remote add staging https://git.heroku.com/staging-wwcode-api.git
-$ git remote add production https://git.heroku.com/staging-wwcode-api.git`
+
+`$ git remote add staging https://git.heroku.com/staging-wwcode-api.git `
+`$ git remote add production https://git.heroku.com/staging-wwcode-api.git`
 
 PSequel provides an interface to manage PostgresSQL.  Go to the link below and download the application.
 http://www.psequel.com/
