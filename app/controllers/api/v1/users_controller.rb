@@ -32,6 +32,10 @@ class Api::V1::UsersController < ApplicationController
     network = user.network
     events = network.events
     
+    user_hash = user.as_json( 
+      include: { network: {
+        include: :events} })
+
     user_hash["login_location_networks"] = [].as_json(include: :events) #[] to be filled in with location based on login geo-coordinates sent by client side
 
       respond_to do |format|
