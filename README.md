@@ -1,7 +1,7 @@
 WomenWhoCode API
 
 #About
-This is the API for the WomenWhoCode web app. It works in conjunction with the web client app, which you can find (here)[https://github.com/WomenWhoCode/wwcode-webclient-app].
+This is the API for the WomenWhoCode web app. It works in conjunction with the web client app, which you can find [here](https://github.com/WomenWhoCode/wwcode-webclient-app).
 
 This API is a REST API built with Ruby on Rails. Currently, return format for all endpoints is JSON.
 
@@ -19,27 +19,27 @@ PSequel provides an interface to manage PostgresSQL.  Go to the link below and d
 http://www.psequel.com/
 
 To link the PSequel application to your PostgresSQL:
-*Log in to your Heroku account and go to Settings.
-*Select “reveal config vars”.
-*Copy the text that is in “DATABASE_URL”.
-*Now go to PSequel and click “import URL from Clipboard.
-*From there you should be able to access your PostgreSQL database through PSequel.
+* Log in to your Heroku account and go to Settings.
+* Select “reveal config vars”.
+* Copy the text that is in “DATABASE_URL”.
+* Now go to PSequel and click “import URL from Clipboard.
+* From there you should be able to access your PostgreSQL database through PSequel.
 
 You can use PSequel to manually add data to the database.
 
 #Models
 The following are models created:
-*Event
-*Network
-*Personalization Answer
-*Personalization Detail
-*Personalization Question
-*Post
-*Profile
-*Reply
-*Subscribe
-*User
-*User Access Code
+* Event
+* Network
+* Personalization Answer
+* Personalization Detail
+* Personalization Question
+* Post
+* Profile
+* Reply
+* Subscribe
+* User
+* User Access Code
 
 As of 03/2016, endpoints are set up with User, Profile, and Event.
 
