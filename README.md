@@ -1,1 +1,51 @@
-# ww-code-api
+WomenWhoCode API
+
+#About
+This is the API for the WomenWhoCode web app. It works in conjunction with the web client app, which you can find (here)[https://github.com/WomenWhoCode/wwcode-webclient-app].
+
+This API is a REST API built with Ruby on Rails. Currently, return format for all endpoints is JSON.
+
+#Installation
+Open terminal and clone the GitHub repository 
+`$ git clone git@github.com:WomenWhoCode/ww-code-api.git`
+
+Add Heroku remotes for both the staging and production environments
+`$ git remote add staging https://git.heroku.com/staging-wwcode-api.git
+$ git remote add production https://git.heroku.com/staging-wwcode-api.git`
+
+PSequel provides an interface to manage PostgresSQL.  Go to the link below and download the application.
+http://www.psequel.com/
+
+To link the PSequel application to your PostgresSQL:
+*Log in to your Heroku account and go to Settings.
+*Select “reveal config vars”.
+*Copy the text that is in “DATABASE_URL”.
+*Now go to PSequel and click “import URL from Clipboard.
+*From there you should be able to access your PostgreSQL database through PSequel.
+
+You can use PSequel to manually add data to the database.
+
+#Models
+The following are models created:
+*Event
+*Network
+*Personalization Answer
+*Personalization Detail
+*Personalization Question
+*Post
+*Profile
+*Reply
+*Subscribe
+*User
+*User Access Code
+
+As of 03/2016, endpoints are set up with User, Profile, and Event.
+
+#Cross Origin Requests
+The app is setup to only allow cross origin requests with the following domains:
+` 'localhost:3000', 'staging-wwcode-client.herokuapp.com/', 'staging-wwcode-api.herokuapp.com/', 'production-wwcode-api.herokuapp.com/', 'production-wwcode-client.herokuapp.com/' `
+
+If another domain must be added, you can add it to config/application.rb and add it as an `origin` under `config.middleware.use Rack::Cors do`.
+
+#Known Bugs
+Validation with the access code upon sign up does not generate the correct error yet.
