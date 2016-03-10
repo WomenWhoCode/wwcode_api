@@ -31,14 +31,13 @@ You can use PSequel to manually add data to the database.
 1. Make sure you are in the master branch git checkout master
 2. Sync your copy git pull
 3. Create a new branch with a meaningful name git checkout -b branch_name
-4. Develop your feature on Android Studio and run it using the emulator or connecting your own Android device
-5. Clean your project from Android Studio Build/Clean project
-6. Add the files you changed git add file_name (avoid using git add .)
-7. Commit your changes git commit -m "Message briefly explaining the feature"
-8. We have small Pull Requests, try to keep one commit per feature. If you forgot to add changes, you can edit the previous commit git commit --amend
-9. Push to your repo git push origin branch-name
-10. Go into the Github repo and create a pull request explaining your changes
-11. You will need to add a message on the pull request notifying your changes to your reviewer
+4. Develop your feature on your branch
+5. Add the files you changed git add file_name (avoid using git add .)
+6. Commit your changes git commit -m "Message briefly explaining the feature"
+7. We have small Pull Requests, try to keep one commit per feature. If you forgot to add changes, you can edit the previous commit git commit --amend
+8. Push to your repo git push origin branch-name
+9. Go into the Github repo and create a pull request explaining your changes
+10. You will need to add a message on the pull request notifying your changes to your reviewer
 
 #Models
 The following are models created:
