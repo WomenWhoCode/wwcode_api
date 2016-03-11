@@ -8,7 +8,7 @@ This API is a REST API built with Ruby on Rails. Currently, return format for al
 #Installation
 Open terminal and clone the GitHub repository 
 
-`$ git clone git@github.com:WomenWhoCode/ww-code-api.git`
+`$ git clone git@github.com:WomenWhoCode/wwcode_api.git`
 
 Add Heroku remotes for both the staging and production environments
 
