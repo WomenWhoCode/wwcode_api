@@ -11,13 +11,13 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(awesome_count: params[:awesome_count], description: params[:description], event_id: params[:event_id], feature_id: params[:feature_id], photo: params[:photo], user_id: current_user.id, createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @post = Post.create(post_params)
     render :show
   end
 
   def update
     @post = Post.find(params[:id])
-    @post.update(awesome_count: params[:awesome_count], description: params[:description], event_id: params[:event_id], feature_id: params[:feature_id], photo: params[:photo], user_id: current_user.id, createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @post.update_attributes(post_params)
     render :show
   end
 
@@ -25,4 +25,11 @@ class Api::V1::PostsController < ApplicationController
     Post.find(params[:id]).destroy
     format.json {render json: "Post Deleted"}
   end
+
+  private
+
+  def post_params
+    params.permit(:awesome_count, :description, :event_id, :feature_id, :photo, :user_id, :createdAt, :updatedAt)
+  end
+
 end
