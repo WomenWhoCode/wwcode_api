@@ -11,13 +11,14 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id])
+    @user = User.create(users_params)
+    @user.update_attributes(emailVerified: false)
     render :show
   end
 
   def update
     @user = User.find(params[:id])
-    @user.update(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id])
+    @user.update_attributes(users_params, emailVerified: false)
     render :show
   end
 
@@ -49,5 +50,11 @@ class Api::V1::UsersController < ApplicationController
           render json: user_hash
         end
       end
+  end
+
+  private
+
+  def users_params
+    params.permit(:username, :password, :email, :phone, :profile_id)
   end
 end

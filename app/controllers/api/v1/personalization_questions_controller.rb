@@ -9,13 +9,13 @@ class Api::V1::PersonalizationQuestionsController < ApplicationController
   end
 
   def create
-    @personalization_question = PersonalizationQuestion.create(detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @personalization_question = PersonalizationQuestion.create(personalization_questions_params)
     render :show
   end
 
   def update
     @personalization_question = PersonalizationQuestion.find(params[:id])
-    @personalization_question.update(detail: params[:detail], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @personalization_question.update(personalization_questions_params)
     render :show
   end
 
@@ -23,5 +23,11 @@ class Api::V1::PersonalizationQuestionsController < ApplicationController
     PersonalizationQuestion.find(params[:id]).destroy
     format.json {render json: "Question Removed"}
   end
+
+  private
+
+  def personalization_questions_params
+    params.permit(:detail, :createdAt, :updatedAt)
+  end 
 
 end

@@ -9,19 +9,26 @@ class Api::V1::SubscribesController < ApplicationController
   end
 
   def create
-    @subscribe = Subscribe.create(event_id: params[:event_id], feature_id: params[:feature_id], network_id: params[:network_id], subscribed: params[:subscribed], user_id: current_user.id, createdAt: Time.now, updatedAt: Time.now)
+    @subscribe = Subscribe.create(subscribes_params)
+    @subscribe.update_attributes(createdAt: Time.now, updatedAt: Time.now)
     render :show
   end
 
   def update
     @subscribe = Subscribe.find(params[:id])
-    @subscribe.update(event_id: params[:event_id], feature_id: params[:feature_id], network_id: params[:network_id], subscribed: params[:subscribed], user_id: current_user.id, updatedAt: Time.now)
+    @subscribe.update(subscribes_params, updatedAt: Time.now)
     render :show
   end
 
   def destroy
     Subscribe.find(params[:id]).destroy
     format.json {render json: "Subscribe Removed"}
+  end
+
+  private
+
+  def subscribes_params
+    params.permit(:event_id, :feature_id, :network_id, :subscribed, :user_id)
   end
 
 
