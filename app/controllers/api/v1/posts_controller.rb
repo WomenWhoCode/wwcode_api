@@ -29,7 +29,7 @@ class Api::V1::PostsController < ApplicationController
   private
 
   def post_params
-    params.permit(:awesome_count, :description, :event_id, :feature_id, :photo, :user_id, :createdAt, :updatedAt)
+    params.permit(:awesome_count, :description, :event_id, :feature_id, :photo, :user_id, :created_at, :updated_at)
   end
 
 end

@@ -10,16 +10,16 @@ class Api::V1::ProfilesController < ApplicationController
   end
 
   def create
-    coordinates = get_coordinates(params[:location])
+    coordinates = get_coordinates(location_param)
     @profile = Profile.create(profile_params)
-    @profile.update_attributes(latitude: coordinates[0], longitude: coordinates[1])
+    @profile.update_attributes(latitude: coordinates[first], longitude: coordinates[last])
     render :show
   end
 
   def update
     @profile = Profile.find(params[:id])
-    coordinates = get_coordinates(params[:location])
-    @profile.update_attributes(profile_params, latitude: coordinates[0], longitude: coordinates[1])
+    coordinates = get_coordinates(location_param)
+    @profile.update_attributes(profile_params, latitude: coordinates[first], longitude: coordinates[last])
     render :show
   end
 
@@ -31,7 +31,11 @@ class Api::V1::ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.permit(:full_name, :image_url, :job_title, :network_id, :photo, :theme_type, :user_id, :createdAt, :updatedAt)
+    params.permit(:full_name, :image_url, :job_title, :network_id, :photo, :theme_type, :user_id, :created_at, :updated_at)
+  end
+
+  def location_param
+    params.permit(:location)
   end
 
   def get_coordinates(location)

@@ -27,7 +27,7 @@ class Api::V1::EventsController < ApplicationController
   private
 
   def event_params
-    params.permit(:featured, :network_id, :event_date, :url, :location, :title, :sunscribe_count, :description, :meetup_event_id, :time_zone, :hex_color, :updatedAt, :createdAt)
+    params.permit(:featured, :network_id, :event_date, :url, :location, :title, :sunscribe_count, :description, :meetup_event_id, :time_zone, :hex_color, :updated_at, :created_at)
   end
 
 end
