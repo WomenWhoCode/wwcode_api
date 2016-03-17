@@ -12,14 +12,14 @@ class Api::V1::ProfilesController < ApplicationController
   def create
     coordinates = get_coordinates(location_param)
     @profile = Profile.create(profile_params)
-    @profile.update_attributes(latitude: coordinates[first], longitude: coordinates[last])
+    @profile.update_attributes(latitude: coordinates.first, longitude: coordinates.last)
     render :show
   end
 
   def update
     @profile = Profile.find(params[:id])
     coordinates = get_coordinates(location_param)
-    @profile.update_attributes(profile_params, latitude: coordinates[first], longitude: coordinates[last])
+    @profile.update_attributes(profile_params, latitude: coordinates.first, longitude: coordinates.last)
     render :show
   end
 
