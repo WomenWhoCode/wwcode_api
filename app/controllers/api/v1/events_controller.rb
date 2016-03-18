@@ -9,19 +9,25 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(featured: params[:featured], network_id: params[:network_id], updatedAt: params[:updatedAt], url: params[:url], event_date: params[:event_date],location: params[:location], title: params[:title], subscribe_count: params[:subscribe_count], createdAt: params[:createdAt], description: params[:description], meetup_event_id: params[:meetup_event_id], time_zone: params[:time_zone], hex_color: params[:hex_color])
+    @event = Event.create(event_params)
     render :show
   end
 
   def update
     @event = Event.find(params[:id])
-    @event.update(featured: params[:featured], network_id: params[:network_id], updatedAt: params[:updatedAt], url: params[:url], event_date: params[:event_date],location: params[:location], title: params[:title], subscribe_count: params[:subscribe_count], createdAt: params[:createdAt], description: params[:description], meetup_event_id: params[:meetup_event_id], time_zone: params[:time_zone], hex_color: params[:hex_color])
+    @event.update_attributes(event_params)
     render :show
   end
 
   def destroy
     Event.find(params[:id]).destroy
     format.json {render json: "Event Removed"}
+  end
+
+  private
+
+  def event_params
+    params.permit(:featured, :network_id, :event_date, :url, :location, :title, :sunscribe_count, :description, :meetup_event_id, :time_zone, :hex_color, :updated_at, :created_at)
   end
 
 end
