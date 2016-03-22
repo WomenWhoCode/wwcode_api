@@ -10,19 +10,25 @@ class Api::V1::UserAccessCodesController < ApplicationController
   end
 
   def create
-    @user_access_code = UserAccessCode.create(email: params[:email], token: params[:token], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @user_access_code = UserAccessCode.create(user_access_codes_params)
     render :show
   end
 
   def update
     @user_access_code = UserAccessCode.find(params[:id])
-    @user_access_code.update(email: params[:email], token: params[:token], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    @user_access_code.update(user_access_codes_params)
     render :show
   end
 
   def destroy
     UserAccessCode.find(params[:id]).destroy
     format.json {render json: "User Access Code Removed"}
+  end
+
+  private
+
+  def user_access_codes_params
+    params.permit(:emails, :token, :createdAt, :updatedAt)
   end
 
 end

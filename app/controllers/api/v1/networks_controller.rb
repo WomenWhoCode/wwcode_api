@@ -9,25 +9,32 @@ class Api::V1::NetworksController < ApplicationController
   end
 
   def create    
-    coordinates = Geocoder.coordinates(params[:location])
-    latitude = coordinates[0]
-    longitude = coordinates [1]
-    @network = Network.create(awesome_count: params[:awesome_count], image_url: params[:image_url], latitude: latitude, longitude: longitude, meetup_group_id: params[:meetup_group_id], time_zone: params[:time_zone], title: params[:title], createdAt: params[:createdAt], updatedAt: params[:updatedAt])
+    coordinates = get_coordinates(params[:location])
+    @network = Network.create(networks_params)
+    @network.update_attributes(lattitude: coordinates[0], longitude: coordinates[1])
     render :show
   end
 
   def update
     @network = Network.find(params[:id])
-    coordinates = Geocoder.coordinates(params[:location])
-    latitude = coordinates[0]
-    longitude = coordinates [1]
-    @network.update(awesome_count: params[:awesome_count], image_url: params[:image_url], latitude: latitude, longitude: longitude, meetup_group_id: params[:meetup_group_id], time_zone: params[:time_zone], title: params[:title], updatedAt: params[:updatedAt])
+    coordinates = get_coordinates(params[:location])
+    @network.update_attributes(networks_params, lattitude: coordinates[0], longitude: coordinates[1])
     render :show
   end
 
   def destroy
     Network.find(params[:id]).destroy
     format.json {render json: "Network Removed"}
+  end
+
+  private
+
+  def networks_params
+    params.permit(:awesome_count, :image_url, :meetup_group_id, :time_zone, :title, :createdAt, :updatedAt)
+  end
+
+  def get_coordinates(location)
+    Geocoder.coordinates(location)
   end
 
 end
