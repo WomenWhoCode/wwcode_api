@@ -1,5 +1,5 @@
 class Users::RegistrationsController < DeviseTokenAuth::RegistrationsController
-    skip_before_filter :authenticate_user!, except: [:index, :show]
+    skip_before_filter :authenticate_user!, only: [:new, :create]
     skip_before_filter  :verify_authenticity_token, only: [:create]
   # prepend_before_filter :require_no_authentication, :only => [ :new, :create ]
 # before_filter :configure_sign_up_params, only: [:create]
