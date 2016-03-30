@@ -1,5 +1,4 @@
 class Api::V1::UsersController < ApplicationController
-  
   protect_from_forgery except: :user_events
 
   def index
@@ -11,13 +10,14 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id])
+    @user = User.new(user_params, emailVerified: false)
+    @user.save
     render :show
   end
 
   def update
     @user = User.find(params[:id])
-    @user.update(username: params[:username], password: params[:password], emailVerified: false, email: params[:email], phone: params[:phone], profile_id: params[:profile_id])
+    @user.update(user_params, emailVerified: false)
     render :show
   end
 
@@ -31,7 +31,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(user_id)
     network = user.network
     events = network.events
-    
+
     user_hash = user.as_json( 
       include: { network: {
         include: :events} })
@@ -49,5 +49,11 @@ class Api::V1::UsersController < ApplicationController
           render json: user_hash
         end
       end
+  end
+
+  private
+
+  def user_params
+    params.permit(:username, :password, :emailVerified, :email, :phone, :profile_id)
   end
 end
