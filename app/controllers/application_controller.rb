@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :email
     devise_parameter_sanitizer.for(:sign_up) << :password
     devise_parameter_sanitizer.for(:sign_up) << :access_code
-
   end
 
 end
