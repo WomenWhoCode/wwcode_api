@@ -2,13 +2,12 @@
 
 FactoryGirl.define do
   factory :post do
-    objectId "MyString"
-    awesome_account 1
+    awesome_count 1
     description "MyString"
-    eventId "MyString"
-    featureId "MyString"
+    event_id 1
+    feature_id 1
     photo "MyString"
-    userId "MyString"
+    user_id 1
     createdAt "2016-02-19"
     updatedAt "2016-02-19"
   end
