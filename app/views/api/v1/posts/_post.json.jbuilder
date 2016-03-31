@@ -7,11 +7,7 @@ json.photo post.photo
 json.user_id post.user_id
 json.createdAt post.createdAt
 json.updatedAt post.updatedAt
-end 
 
-json.id reply.id do |reply|
-json.child_post_id reply.child_post_id
-json.createdAt reply.createdAt
-json.parent_post_id reply.parent_post_id
-json.updatedAt reply.updatedAt
+json.replies post.replies.each do |reply|
+  json.(reply, :id, :child_post_id, :parent_post_id, :createdAt, :updatedAt)
 end

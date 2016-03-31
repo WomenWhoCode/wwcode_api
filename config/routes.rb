@@ -14,7 +14,7 @@
   mount_devise_token_auth_for 'User', at: 'auth', controllers: { sessions: "users/sessions" }
   root to: "welcome#index"
 
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
       get '/users/events', to: 'users#user_events'
       resources :users

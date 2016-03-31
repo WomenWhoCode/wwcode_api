@@ -2,10 +2,10 @@
 
 FactoryGirl.define do
   factory :reply do
-    objectId "MyString"
-    child_post_id "MyString"
+    child_post_id "MyChildPostId"
     createdAt "2016-02-16"
-    parent_post_id "MyString"
+    parent_post_id "MyParentPostId"
     updatedAt "2016-02-16"
+    post
   end
 end
