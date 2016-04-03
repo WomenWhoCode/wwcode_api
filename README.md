@@ -6,21 +6,19 @@ This is the API for the WomenWhoCode web app. It works in conjunction with the w
 This API is a REST API built with Ruby on Rails. Currently, return format for all endpoints is JSON.
 
 #Installation
-Open terminal and clone the GitHub repository 
-
-`$ git clone git@github.com:WomenWhoCode/wwcode_api.git`
+1. Fork the GitHub repository and clone the fork to your local environment
+1. Create a remote to the upstream repository: `git remote add upstream git@github.com:WomenWhoCode/wwcode_api.git`
 
 #Contributing and developing a feature
 1. Make sure you are in the master branch: `git checkout master`
-2. Sync your copy: `git pull`
+2. Sync your copy: `git fetch upstream` then `git merge upstream/master`
 3. Create a new branch with a meaningful name: `git checkout -b branch_name`
 4. Develop your feature on your branch
 5. Add the files you changed: `git add file_name` (avoid using `git add .`)
 6. Commit your changes: `git commit -m "Message briefly explaining the feature"`
-7. We have small Pull Requests, try to keep one commit per feature. If you forgot to add changes, you can edit the previous commit: `git commit --amend`
-8. Push to your repo: `git push origin branch-name`
-9. Go into the Github repo and create a pull request explaining your changes
-10. You will need to add a message on the pull request notifying your changes to your reviewer
+7. We have small Pull Requests; try to keep one commit per feature.
+8. Push to your fork: `git push origin branch_name`
+9. Go into the wwcode_api GitHub repo and create a pull request explaining your changes
 
 #Models
 The following are models created:
