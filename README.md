@@ -18,7 +18,7 @@ This API is a REST API built with Ruby on Rails. Currently, return format for al
 6. Commit your changes: `git commit -m "Message briefly explaining the feature"`
 7. We have small Pull Requests; try to keep one commit per feature.
 8. Push to your fork: `git push origin branch_name`
-9. Go into the wwcode_api GitHub repo and create a pull request explaining your changes
+9. Go into the wwcode_api GitHub repo and create a pull request explaining your changes.  Please include one of the special keywords in either your commit message or your pull request that will automatically close your issue once your pull request is accepted.  See [closing an issue via a commit](https://help.github.com/articles/closing-issues-via-commit-messages/) or [closing an issue via a pull request](https://github.com/blog/1506-closing-issues-via-pull-requests) for examples.
 
 #Models
 The following are models created:
