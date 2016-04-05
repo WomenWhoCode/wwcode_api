@@ -8,6 +8,7 @@ This API is a REST API built with Ruby on Rails. Currently, return format for al
 #Installation
 1. Fork the GitHub repository and clone the fork to your local environment
 1. Create a remote to the upstream repository: `git remote add upstream git@github.com:WomenWhoCode/wwcode_api.git`
+1. Copy the file `config/database.yml.example` to `config/database.yml` and update the username and password in the development and test environments to match your Postgres installation
 
 #Contributing and developing a feature
 1. Make sure you are in the master branch: `git checkout master`
